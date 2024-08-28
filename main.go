@@ -11,6 +11,6 @@ func main() {
 	app.Get("/", func(c fiber.Ctx) error {
 		return c.SendString("first web server trial")
 	})
-	app.Get("/myBookList")
+	app.Get("/myBookList", handler.getBookList)
 	log.Fatal(app.Listen(":8080"))
 }

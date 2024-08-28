@@ -1,4 +1,4 @@
-module github.com/rahmatdinar/go-web-server
+module go-web-server
 
 go 1.22.0
 
