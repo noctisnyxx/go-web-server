@@ -1,6 +1,7 @@
 package main
 
 import (
+	"go-web-server/handler"
 	"log"
 
 	"github.com/gofiber/fiber/v3"
@@ -8,9 +9,9 @@ import (
 
 func main() {
 	app := fiber.New()
-	app.Get("/", func(c fiber.Ctx) error {
+	app.Get("/home", func(c fiber.Ctx) error {
 		return c.SendString("first web server trial")
 	})
-	app.Get("/myBookList", handler.getBookList)
+	app.Get("/myBookList", handler.GetBookList)
 	log.Fatal(app.Listen(":8080"))
 }
